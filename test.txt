@@ -1,1 +1,10 @@
-Pavan repository
+Install Jenkins from https://www.jenkins.io/
+_____________________________
+1. select the first option (not recommended)
+2. have jvm 8 or 11
+3. Select the jdk file 
+4. Change the port no.
+5. next till we get install option
+6. After installation, It opens up the local host with our port nmber. It asks for password.
+7. Get the password from C:\Windows\System32\config\systemprofile\AppData\Local\Jenkins\.jenkins\secrets
+8. 
