@@ -1,4 +1,4 @@
-package com.example.flutter_mentor_quiz_app
+package com.example.deployproj
 
 import io.flutter.embedding.android.FlutterActivity
 

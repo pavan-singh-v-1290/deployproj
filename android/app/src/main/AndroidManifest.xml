@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.flutter_mentor_quiz_app">
+    package="com.example.deployproj">
    <application
-        android:label="flutter_mentor_quiz_app"
+        android:label="deployproj"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

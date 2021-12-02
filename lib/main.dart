@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'signup.dart';
-import 'home_page.dart';
+import 'domain_page.dart';
 
 void main() => runApp(new MyApp());
 
@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       routes: <String, WidgetBuilder>{
         '/signup': (BuildContext context) => new SignupPage(),
-        '/home_page' :(BuildContext context) => new HomePage()
+        '/domain_page' :(BuildContext context) => new DomainPage()
       },
       home: new MyHomePage(),
     );
@@ -109,7 +109,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         elevation: 7.0,
                         child: GestureDetector(
                           onTap: () {
-                            Navigator.of(context).pushNamed('/home_page');
+                            Navigator.of(context).pushNamed('/domain_page');
                           },
                           child: Center(
                             child: Text(
@@ -160,7 +160,7 @@ class _MyHomePageState extends State<MyHomePage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Text(
-                  'New to Spotify ?',
+                  'New to Mentizz deploy ?',
                   style: TextStyle(fontFamily: 'Montserrat'),
                 ),
                 SizedBox(width: 5.0),
