@@ -5,9 +5,12 @@ import 'package:deployproj/model/mentor_model.dart';
 import 'package:deployproj/profile_page.dart';
 import 'package:deployproj/widget/ratings.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:deployproj/model/domain_model.dart';
 
 class HomePage extends StatelessWidget {
-  HomePage({Key key}) : super(key: key);
+
+  HomePage({Key key, this.model}) : super(key: key);
+  final DomainModel model;
   List<MentorModel> list = [
     MentorModel(
         name: "Pavan Singh",
