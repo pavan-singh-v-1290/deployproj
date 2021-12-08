@@ -3,7 +3,7 @@ class MentorModel{
   final String image;
   final String type;
   final double ratings;
-  final double price;
+  final String desc;
 
-  MentorModel({this.name, this.type, this.ratings, this.price, this.image});
+  MentorModel({this.name, this.type, this.ratings, this.image, this.desc});
 }

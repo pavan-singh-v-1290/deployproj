@@ -125,7 +125,7 @@ class ProfilePage extends StatelessWidget {
               style: GoogleFonts.inter(
                   fontWeight: FontWeight.w600, fontSize: 15, height: 1.3)),
           SizedBox(height: 5),
-          Text("${Constants.description.substring(0,350)}",
+          Text(model.desc,
               style: GoogleFonts.inter(
                   fontWeight: FontWeight.w300,
                   fontSize: 12,

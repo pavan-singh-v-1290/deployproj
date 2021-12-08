@@ -11,13 +11,13 @@ class DomainPage extends StatelessWidget {
   final DomainModel model;
   List<DomainModel> list = [
     DomainModel(
-        name: "Pavan Singh"),
+        name: "Health"),
     DomainModel(
-        name: "Pravalika"),
+        name: "Entertainment"),
     DomainModel(
-        name: "Joseph Gonzalez"),
+        name: "Education"),
     DomainModel(
-        name: "Jenny Leiefser"),
+        name: "Lifestyle"),
   ];
 
   Widget _category(context) {
@@ -41,7 +41,7 @@ class DomainPage extends StatelessWidget {
     );
   }
 
-  Widget _cards(context, DomainModel model) {
+  Widget _cards(context, DomainModel model, int n) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 12),
       child: GestureDetector(
@@ -49,7 +49,7 @@ class DomainPage extends StatelessWidget {
           Navigator.push(
               context,
               MaterialPageRoute(
-                  builder: (context) => HomePage(model : model)));
+                  builder: (context) => HomePage(n : n)));
         },
         child: Row(
           children: <Widget>[
@@ -103,10 +103,10 @@ class DomainPage extends StatelessWidget {
                         SizedBox(height: 25),
                         _category(context),
                         SizedBox(height: 20),
-                        _cards(context, list[0]),
-                        _cards(context, list[1]),
-                        _cards(context, list[2]),
-                        _cards(context, list[3]),
+                        _cards(context, list[0], 0),
+                        _cards(context, list[1], 1),
+                        _cards(context, list[2], 2),
+                        _cards(context, list[3], 3),
                       ],
                     ))
               ],

@@ -9,35 +9,130 @@ import 'package:deployproj/model/domain_model.dart';
 
 class HomePage extends StatelessWidget {
 
-  HomePage({Key key, this.model}) : super(key: key);
-  final DomainModel model;
-  List<MentorModel> list = [
+  HomePage({Key key, this.model, this.n}) : super(key: key);
+  final MentorModel model;
+  final int n;
+
+  List<List<MentorModel>> list = [
+    [
     MentorModel(
-        name: "Pavan Singh",
+        name: "frst domain",
         image: "assets/images/face_1.jpg",
         type: "Business",
-        ratings: 4),
+        ratings: 4,
+        desc: "aaaaaaaaaaaaaaaaa"),
     MentorModel(
         name: "Jenny Nackos",
         image: "assets/images/face_2.jpg",
         type: "Parenting",
-        ratings: 5),
+        ratings: 5,
+        desc : "cccccccccccccccccccc"),
     MentorModel(
         name: "Joseph Gonzalez",
         image: "assets/images/face_3.jpg",
         type: "Health",
-        ratings: 3),
+        ratings: 3,
+        desc : "ddddddddddd"),
     MentorModel(
         name: "Jenny Leiefser",
         image: "assets/images/face_4.jpg",
         type: "lawyer",
-        ratings: 5),
+        ratings: 5,
+        desc: "fffffffffffffff"),
+  ],
+    [
+      MentorModel(
+          name: "scnd domain1",
+          image: "assets/images/face_1.jpg",
+          type: "Business",
+          ratings: 4,
+          desc: "aaaaaaaaaaaaaaaaa"),
+      MentorModel(
+          name: "scnd domain2",
+          image: "assets/images/face_2.jpg",
+          type: "Parenting",
+          ratings: 5,
+          desc : "cccccccccccccccccccc"),
+      MentorModel(
+          name: "scnd domain13",
+          image: "assets/images/face_3.jpg",
+          type: "Health",
+          ratings: 3,
+          desc : "ddddddddddd"),
+      MentorModel(
+          name: "scnd domain4",
+          image: "assets/images/face_4.jpg",
+          type: "lawyer",
+          ratings: 5,
+          desc: "fffffffffffffff"),
+    ],
+    [
+      MentorModel(
+          name: "thirddddd",
+          image: "assets/images/face_1.jpg",
+          type: "Business",
+          ratings: 4,
+          desc: "aaaaaaaaaaaaaaaaa"),
+      MentorModel(
+          name: "Jenny Nackos",
+          image: "assets/images/face_2.jpg",
+          type: "Parenting",
+          ratings: 5,
+          desc : "cccccccccccccccccccc"),
+      MentorModel(
+          name: "Joseph Gonzalez",
+          image: "assets/images/face_3.jpg",
+          type: "Health",
+          ratings: 3,
+          desc : "ddddddddddd"),
+      MentorModel(
+          name: "Jenny Leiefser",
+          image: "assets/images/face_4.jpg",
+          type: "lawyer",
+          ratings: 5,
+          desc: "fffffffffffffff"),
+    ],
+    [
+      MentorModel(
+          name: "fourthhh",
+          image: "assets/images/face_1.jpg",
+          type: "Business",
+          ratings: 4,
+          desc: "aaaaaaaaaaaaaaaaa"),
+      MentorModel(
+          name: "Jenny Nackos",
+          image: "assets/images/face_2.jpg",
+          type: "Parenting",
+          ratings: 5,
+          desc : "cccccccccccccccccccc"),
+      MentorModel(
+          name: "Joseph Gonzalez",
+          image: "assets/images/face_3.jpg",
+          type: "Health",
+          ratings: 3,
+          desc : "ddddddddddd"),
+      MentorModel(
+          name: "Jenny Leiefser",
+          image: "assets/images/face_4.jpg",
+          type: "lawyer",
+          ratings: 5,
+          desc: "fffffffffffffff"),
+    ]
   ];
-  Widget _appBar() {
+  Widget _appBar(context) {
     return Row(
       children: <Widget>[
-        Icon(MIcons.menu),
-        Spacer(),
+        GestureDetector(
+          onTap: () {
+          Navigator.pop(context);
+          },
+          child: Container(
+            padding: EdgeInsets.symmetric(vertical: 12),
+            child: Icon(MIcons.keyboard_arrow_left),
+          ),
+        ),
+
+    Spacer(),
         Icon(MIcons.bell_24),
       ],
     );
@@ -186,7 +281,7 @@ class HomePage extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         SizedBox(height: 40),
-                        _appBar(),
+                        _appBar(context),
                         SizedBox(height: 30),
                         Text("Find Your",
                             style: GoogleFonts.inter(
@@ -203,10 +298,10 @@ class HomePage extends StatelessWidget {
                         SizedBox(height: 25),
                         _category(context),
                         SizedBox(height: 20),
-                        _cards(context, list[0]),
-                        _cards(context, list[1]),
-                        _cards(context, list[2]),
-                        _cards(context, list[3]),
+                        _cards(context, list[n][0]),
+                        _cards(context, list[n][1]),
+                        _cards(context, list[n][2]),
+                        _cards(context, list[n][3]),
                       ],
                     ))
               ],
