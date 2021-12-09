@@ -33,45 +33,45 @@ class HomePage extends StatelessWidget {
     );
   }
 
-  Widget _searchBar(context) {
-    return Container(
-      height: 60,
-      margin: EdgeInsets.symmetric(
-        vertical: 20,
-      ),
-      decoration: BoxDecoration(
-        color: Color(0xffd2d1e1).withOpacity(.3),
-        borderRadius: BorderRadius.circular(20),
-      ),
-      child: Row(
-        children: <Widget>[
-          SizedBox(width: 16),
-          Icon(Icons.search),
-          SizedBox(width: 12),
-          SizedBox(
-            width: MediaQuery.of(context).size.width - 150,
-            child: TextField(
-              decoration: InputDecoration(
-                  hintText: "Search",
-                  hintStyle: GoogleFonts.inter(fontSize: 17),
-                  border: InputBorder.none
-              ),
-            ),
-          ),
-          Spacer(),
-          Container(
-              width: 60,
-              height: 60,
-              decoration: BoxDecoration(
-                color: Color(0xff16d19a),
-                borderRadius: BorderRadius.circular(20),
-              ),
-              child: RotatedBox(
-                  quarterTurns: 1,
-                  child: Icon(MIcons.sliders, color: Colors.white)))
-        ],
-      ),);
-  }
+  // Widget _searchBar(context) {
+  //   return Container(
+  //     height: 60,
+  //     margin: EdgeInsets.symmetric(
+  //       vertical: 20,
+  //     ),
+  //     decoration: BoxDecoration(
+  //       color: Color(0xffd2d1e1).withOpacity(.3),
+  //       borderRadius: BorderRadius.circular(20),
+  //     ),
+  //     child: Row(
+  //       children: <Widget>[
+  //         SizedBox(width: 16),
+  //         Icon(Icons.search),
+  //         SizedBox(width: 12),
+  //         SizedBox(
+  //           width: MediaQuery.of(context).size.width - 150,
+  //           child: TextField(
+  //             decoration: InputDecoration(
+  //                 hintText: "Search",
+  //                 hintStyle: GoogleFonts.inter(fontSize: 17),
+  //                 border: InputBorder.none
+  //             ),
+  //           ),
+  //         ),
+  //         Spacer(),
+  //         Container(
+  //             width: 60,
+  //             height: 60,
+  //             decoration: BoxDecoration(
+  //               color: Color(0xff16d19a),
+  //               borderRadius: BorderRadius.circular(20),
+  //             ),
+  //             child: RotatedBox(
+  //                 quarterTurns: 1,
+  //                 child: Icon(MIcons.sliders, color: Colors.white)))
+  //       ],
+  //     ),);
+  // }
 
   Widget _category(context) {
     return Row(
@@ -80,25 +80,25 @@ class HomePage extends StatelessWidget {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Text("Featured",
+            Text("Popular mentors",
                 style: GoogleFonts.inter(fontSize: 14, color: Colors.black87)),
-            SizedBox(
-                width: 49,
-                child: Divider(
-                  color: MColor.green,
-                  thickness: 4,
-                ))
+            // SizedBox(
+            //     width: 49,
+            //     child: Divider(
+            //       color: MColor.green,
+            //       thickness: 1,
+            //     ))
           ],
         ),
         SizedBox(width: 12),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: <Widget>[
-            Text("Popular mentors",
-                style: GoogleFonts.inter(fontSize: 14, color: Colors.black38)),
-          ],
-        ),
+        // Column(
+        //   crossAxisAlignment: CrossAxisAlignment.start,
+        //   mainAxisAlignment: MainAxisAlignment.start,
+        //   children: <Widget>[
+        //     Text("Popular mentors",
+        //         style: GoogleFonts.inter(fontSize: 14, color: Colors.black38)),
+        //   ],
+        // ),
       ],
     );
   }
@@ -188,8 +188,8 @@ class HomePage extends StatelessWidget {
                                 fontSize: 22,
                                 color: Colors.black87,
                                 fontWeight: FontWeight.w500)),
-                        SizedBox(height: 7),
-                        _searchBar(context),
+                        // SizedBox(height: 7),
+                        // _searchBar(context),
                         SizedBox(height: 25),
                         _category(context),
                         SizedBox(height: 20),

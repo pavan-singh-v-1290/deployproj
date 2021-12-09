@@ -87,6 +87,15 @@ class DomainPage extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.pop(context);
+                          },
+                          child: Container(
+                            padding: EdgeInsets.symmetric(vertical: 12),
+                            child: Icon(MIcons.keyboard_arrow_left),
+                          ),
+                        ),
                         SizedBox(height: 40),
                         Text("Find Your",
                             style: GoogleFonts.inter(

@@ -181,7 +181,7 @@ class ProfilePage extends StatelessWidget {
       child: Container(
         height: 60,
         alignment: Alignment.center,
-        child: Text("Hire Now",
+        child: Text("Chat Now",
             style: GoogleFonts.inter(
               color: Colors.white,
               fontWeight: FontWeight.w500,
